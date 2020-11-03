@@ -2,19 +2,36 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style/style.css">
 
 
 
-	<title>Shopping Mall</title>
+	<title>PORTFOLIO</title>
 
 
 </head>
 <body>
 <div id="wrap">
-	<header id="header">
-			<span class="brandName">Brand Name</span>
+    <header id="pc_under_header">
+		<h2 class="under_brandName">PORTFOLIO</h2>
+	<nav id="pc_under_nav">
+		<ul class="under_menu">
+			<li><a href="#">About</a></li>
+			<li><a href="#">E-Shop</a></li>
+			<li><a href="#">Community</a></li>
+		</ul>
+		<ul class="under_menu">
+			<li><a href="#" class="top">Join</a></li>
+			<li><a href="#">Login</a></li>
+			<li><a href="#">Cart</a></li>
+			<li><a href="#">Search</a></li>
+		</ul>
+	</nav>
+</header>
+
+	<header id="pc_header" class="on">
+			<h2 class="brandName">PORTFOLIO</h2>
 		<nav id="pc_nav">
 			<ul class="menu">
 				<li><a href="#">About</a></li>
@@ -23,53 +40,98 @@
 			</ul>
 
 			<ul class="menu">
-				<li><a href="#">Join</a></li>
+				<li><a href="#" class="top">Join</a></li>
 				<li><a href="#">Login</a></li>
 				<li><a href="#">Cart</a></li>
 				<li><a href="#">Search</a></li>
 			</ul>
 		</nav>
 	</header>
+	
+	<input type="checkbox" id="menu_chk">
+	<header id="mb_header">
+		<label for="menu_chk" id="menu_icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+    </label>
+	</header>
+
 <div id="mainSlide">
-	 <div class="item"><img src="img/1.jpg" alt="1"></div>
+	 <div class="item"><img src="img/3.jpg" alt="1"></div>
 
 </div>
 
-	<div id="introCopy">
-
-		<h2 id="intro">더 나은 삶을 꿈꾸는
+<div id="introCopy">
+	<div id="introCopy_wrap">
+		<h2 id="intro">Responsive Web
 </h2>
-<h2 id="intro_title">Brand Name</h2>
+		<h2 id="intro_title">PORTFOLIO</h2>
 	</div>
+</div>
 	<div id="topRanking">
 		<h2 class="subTitle">Top Ranking</h2>
 		<ul id="topRank">
-			<li><a href="#"><span class="rankBox">1</span></a></li>
-			<li><a href="#"><span class="rankBox">2</span></a></li>
-			<li><a href="#"><span class="rankBox">3</span></a></li>
-			<li><a href="#"><span class="rankBox">4</span></a></li>
-			<li><a href="#"><span class="rankBox">5</span></a></li>
-			<li><a href="#"><span class="rankBox">6</span></a></li>
+			<li><a href="#"><span class="rankBox">1</span>
+			<img src="img/product/1.jpg" alt="1"></a></li>
+			<li><a href="#"><span class="rankBox">2</span><img src="img/product/2.jpg" alt="1"></a></li>
+			<li><a href="#"><span class="rankBox">3</span><img src="img/product/3.jpg" alt="1"></a></li>
+			<li><a href="#"><span class="rankBox">4</span><img src="img/product/4.jpg" alt="1"></a></li>
+			<li><a href="#"><span class="rankBox">5</span><img src="img/product/5.jpg" alt="1"></a></li>
+			<li><a href="#"><span class="rankBox">6</span><img src="img/product/6.jpg" alt="1"></a></li>
 		</ul>
 	</div>
 	<div id="subSlidess">
-		<h2 class="subTitle">special something</h2>
-	<div id="subSlideFrame">
-			<div></div>
-			<div></div>
+		<h2 class="subTitle">Special Something</h2>
+		<div id="subSlideFrame">
+			<ul id="subSlideMove">
+				<li><a href="#"><img src="img/slide/slide2-1.jpg" alt="slide2-1" width="100%" height="100%"><span class="bgc_gray"></span></a></li>
+				<li><a href="#"><img src="img/slide/slide2-2.jpg" alt="slide2-1" width="100%" height="100%"><span class="bgc_gray"></span></a></li>
+				<li><a href="#"><img src="img/slide/slide2-3.png" alt="slide2-1" width="100%" height="100%"><span class="bgc_gray"></span></a></li>
+				<li><a href="#"><img src="img/slide/slide2-4.png" alt="slide2-1" width="100%" height="100%"><span ></span></a></li>
+			</ul>
 		</div>
 	</div>
 	<div id="subSlidebi">
-		<h2 class="subTitle">best item</h2>
-		div#
-
+		<h2 class="subTitle">Best item</h2>
+		<ul id="biSlideFrame">
+			<li class="slideItem"></li>
+			<li class="slideItem"></li>
+			<li class="slideItem"></li>
+			<li class="slideItem"></li>
+			<li class="slideItem"></li>
+			<li class="slideItem"></li>
+		</ul>
 
 	</div>
-	<div id="introCopy2">
-		브랜드 홍보
+	<div id="intro2Copy">
+		<h2 id="intro2Title">Brand</h2>
+
 	</div>
 	<footer id="footer">
-		푸터
+		<div id="cs_left">
+			<h3>CS</h3>
+			<p id="cell">1544-0000</p>
+			<p id="alert">AM 9:00 - 18:00 (주말/공휴일 휴무)</p>
+		</div>
+		<div id="cs_center">
+			<h3>COMPANY</h3>
+			<ul>
+				<li>상호 : 쇼핑몰</li>
+				<li>대표 :  홍길동</li>
+				<li>사업자등록번호 : 111-11-11111</li>
+				<li>통신판매업 신고 020-00000호</li>
+				<li>전화 1544-0000</li>
+				<li>주소 : 서울특별시 강남구 삼성동</li>
+				<li>개인정보관리책임자 :  홍길동</li>
+			</ul>
+		</div>
+		<div id="cs_right">
+			<h3>BANK</h3>
+			<p>신한은행 : 123456789</p>
+			<p>국민은행 : 123456789</p>
+			<p>(Brand)</p>		
+		</div>
 	</footer>
 
 
