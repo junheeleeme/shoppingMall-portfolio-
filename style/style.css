@@ -182,20 +182,42 @@ ul.menu li>a{
 	padding: 10px 15px;
 }
 
-div#mainSlide{
+ul#mainSlide{
 	position: relative;
     max-width: 1280px;
+	max-height: 720px;
+	height: 56.25vw;
+
+	list-style: none;
+	padding: 0;
+	font-size: 0;
 }
 
-div#mainSlide img{
+ul#mainSlide li{
+	display: inline-block;
+	position: absolute;
+	max-width: 1280px;
+	height: 100%;
+	opacity: 0;
+	transition: 1s ease;
+}
+ul#mainSlide li.on{
+	opacity: 1;
+}
+
+ul#mainSlide li img{
 	width: 100%;
 	height: 100%;
 }
+
+
+
 
 div#introCopy{
 	width: 100%;
 	height: 350px;
 }
+
 div#introCopy_wrap{
 	position: relative;
 	max-width: 1280px;
@@ -323,7 +345,7 @@ ul#subSlideMove li{
 ul#subSlideMove li>a>span.bgc_gray{
 	display: inline-block;
 	position: absolute;
-	left: 0;
+	left: 0; 
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0,0,0, 0.18);
@@ -340,6 +362,10 @@ span#left_arrow{
 	left: 20px;
 	transform: translate(0, -50%);
 	cursor: pointer;
+}
+
+span#left_arrow>img, span#right_arrow>img{
+	transition: .3s;
 }
 
 span#right_arrow{

@@ -25,8 +25,23 @@ $(window).scroll(function(){
 	}
 });
 
+/* 메인 슬라이드쇼 */
 
+var msIdx_lgth = $("#mainSlide>li").length;
+var start = 1;
 
+function AutoRun(){
+    if(start == msIdx_lgth){
+            start = 0;    
+    }
+    $("#mainSlide>li").eq(start).addClass('on').siblings().removeClass('on');
+    start++;  
+}
+setInterval(AutoRun, 3000);
+
+/* 메인 슬라이드쇼 */
+
+/*  Special Something 슬라이드쇼   */
 $("#left_arrow").click(function(){
 	AutoSlider2_left();
 })
@@ -34,8 +49,7 @@ $("#right_arrow").click(function(){
 	AutoSlider2_right();
 })
 
-let AutoSlide = setInterval(AutoSlider2_left, 5000);
-
+let AutoSlide = setInterval(AutoSlider2_left, 4000);
 
 function AutoSlider2_left(){
 	
@@ -43,34 +57,48 @@ function AutoSlider2_left(){
 		slider2_toggle = false;
 		$("#subSlideMove").animate({'margin-left' : '-645px'}, 1000, 'swing', function(){
 		$("#subSlideMove>li:first").insertAfter("#subSlideMove>li:last");
-        $(this).css({'margin-left' : 0});
 			slider2_toggle = true;	
-	});
-			
+        $(this).css({'margin-left' : 0});
+	});	
  		}
 }
-
 let slider2_toggle = true;
 
 function AutoSlider2_right(){
-
 	if(slider2_toggle == true){
 		slider2_toggle = false;
 	$("#subSlideMove").css({'left' : '-645px'});
 	$("#subSlideMove>li:last").insertBefore($("#subSlideMove>li:first"));
-	$("#subSlideMove").animate({'left' : '0'}, 1000, 'swing', function(){
-		slider2_toggle = true;		
-	});
 		
+	$("#subSlideMove").animate({'left' : '0'}, 1000, 'swing', function(){
+			slider2_toggle = true;	
+	});
 	}	
-	
 }
-
 $("#subSlideFrame").mouseenter(function(){
 	clearInterval(AutoSlide);
-	
 })
 $("#subSlideFrame").mouseleave(function(){
-	AutoSlide = setInterval(AutoSlider2_left, 5000);
+	AutoSlide = setInterval(AutoSlider2_left, 4000);
 })
+/*  Special Something 슬라이드쇼   */
 
+
+
+
+
+
+/*
+$("#left_arrow>img").mouseover(function(){
+	$(this).attr('src', '/img/left-arrow-hover.png');
+})
+$("#right_arrow>img").mouseover(function(){
+	$(this).attr('src', '/img/right-arrow-hover.png');
+})
+$("#left_arrow>img").mouseleave(function(){
+	$(this).attr('src', '/img/left-arrow.png');
+})
+$("#right_arrow>img").mouseleave(function(){
+	$(this).attr('src', '/img/right-arrow.png');
+})
+*/
