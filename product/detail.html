@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../style/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+	<title>PORTFOLIO</title>
+
+
+</head>
+<body>
+<div id="wrap">
+    <header id="pc_under_header">
+		<h2 class="under_brandName"><a href="../index.html">PORTFOLIO</a></h2>
+	<nav id="pc_under_nav">
+		<ul class="under_menu">
+			<li><a href="#">About</a></li>
+			<li><a href="#">E-Shop</a></li>
+			<li><a href="#">Community</a></li>
+		</ul>
+		<ul class="under_menu">
+			<li><a href="#" class="top">Join</a></li>
+			<li><a href="#">Login</a></li>
+			<li><a href="#">Cart</a></li>
+			<li><a href="#">Search</a></li>
+		</ul>
+	</nav>
+</header>
+
+	<header id="pc_header" class="on">
+		<h2 class="brandName"><a href="../index.html">PORTFOLIO</a></a></h2>
+		<nav id="pc_nav">
+			<ul class="menu">
+				<li><a href="#">About</a></li>
+				<li><a href="#">E-Shop</a></li>
+				<li><a href="#">Community</a></li>
+			</ul>
+
+			<ul class="menu">
+				<li><a href="#" class="top">Join</a></li>
+				<li><a href="#">Login</a></li>
+				<li><a href="#">Cart</a></li>
+				<li><a href="#">Search</a></li>
+			</ul>
+		</nav>
+	</header>
+	<input type="checkbox" id="menu_chk">
+	<header id="mb_header">
+		<label for="menu_chk" id="menu_icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+    </label>
+	</header>
+	<div id="contents">
+	    <div id="detailTop">
+	        <div id="detailLeft">
+	            <a href="#"><img src="../img/product/1.jpg" alt="1"></a>
+	     
+	        </div>
+	        <div id="detailRight">
+	            <div id="productInfo">
+	                <h3 class="productTitle">Sample item1</h3>
+	                <table class="productInfo">
+	                    <tr>
+	                        <td>판매가</td>
+                            <td><s>300,000원</s></td>
+	                    </tr>
+	                    <tr>
+	                        <td>세일가</td>
+	                        <td>200,000원</td>
+	                    </tr>
+	                    <tr>
+	                        <td>배송비</td>
+	                        <td>무료배송</td>
+	                    </tr>
+	                    <tr>
+	                        <td>적립금</td>
+	                        <td>4,000원 (2%)</td>
+	                    </tr>
+	                    <tr>
+	                        <td>상품후기</td>
+	                        <td>★★★★☆</td>
+	                    </tr>
+	                </table>
+                   	<table id="amount">
+                   		<tr>
+                   			<th  style="width: 50%;">상품명</th>
+                   			<th style="width: 25%;">상품수량</th>
+                   			<th  style="width: 25%;">가격</th>
+                   		</tr>
+                   		<tr>
+							   <td>Sample item1</td>
+							   <td><span id="quantity"><input type="text" id="quantityBox" value="0" ><span id="quantityUP">+</span><span id="quantityDOWN">-</span></span></td>
+							   <td style="text-align: right;"><span id="price">원</span></td>
+                   		</tr>
+                   	</table>
+
+                    <span id="totalPrice">TOTAL : <h2 id="total">200,000</h2>원 (<span>0</span>개)</span>
+					
+					<div id="roderbtnBox">
+						<button id="buyitnow">BUY IT NOW</button>
+						<button id="addcart">ADD TO CART</button>
+						<button id="wish">WISH LIST</button>
+					</div>
+	                
+	            </div>
+	        </div>
+		</div>
+		<ul class="navTab">
+			<li class="product_detail">PRODUCT DETAIL</li>
+			<li class="shopping_guide">SHOPPING GUIDE</li>
+			<li class="review">REVIEW</li>
+			<li class="qna">Q&A</li>
+			<li class="with_item">WITH ITEM</li>
+		</ul>
+
+	    <div id="detail">
+			detail
+		</div>
+		<ul class="navTab">
+			<li class="product_detail">PRODUCT DETAIL</li>
+			<li class="shopping_guide">SHOPPING GUIDE</li>
+			<li class="review">REVIEW</li>
+			<li class="qna">Q&A</li>
+			<li class="with_item">WITH ITEM</li>
+		</ul>
+		<div id="guide">
+			guide
+		</div>
+		<ul class="navTab">
+			<li class="product_detail">PRODUCT DETAIL</li>
+			<li class="shopping_guide">SHOPPING GUIDE</li>
+			<li class="review">REVIEW</li>
+			<li class="qna">Q&A</li>
+			<li class="with_item">WITH ITEM</li>
+		</ul>
+		<div id="review">
+			review
+		</div>
+		<ul class="navTab">
+			<li class="product_detail">PRODUCT DETAIL</li>
+			<li class="shopping_guide">SHOPPING GUIDE</li>
+			<li class="review">REVIEW</li>
+			<li class="qna">Q&A</li>
+			<li class="with_item">WITH ITEM</li>
+		</ul>
+		<div id="qna">
+			qna
+		</div>	    
+	</div>
+	<footer id="footer">
+		<div id="cs_left">
+			<h3>CS</h3>
+			<p id="cell">1544-0000</p>
+			<p id="alert">AM 9:00 - 18:00 (주말/공휴일 휴무)</p>
+		</div>
+		<div id="cs_center">
+			<h3>COMPANY</h3>
+			<ul>
+				<li>상호 : 쇼핑몰</li>
+				<li>대표 :  홍길동</li>
+				<li>사업자등록번호 : 111-11-11111</li>
+				<li>통신판매업 신고 020-00000호</li>
+				<li>전화 1544-0000</li>
+				<li>주소 : 서울특별시 강남구 삼성동</li>
+				<li>개인정보관리책임자 :  홍길동</li>
+			</ul>
+		</div>
+		<div id="cs_right">
+			<h3>BANK</h3>
+			<p>신한은행 : 123456789</p>
+			<p>국민은행 : 123456789</p>
+			<p>(Brand)</p>		
+		</div>
+	</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../script/script.js"></script>
+</div>
+</body>
+</html>

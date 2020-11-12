@@ -14,8 +14,9 @@
 </head>
 <body>
 <div id="wrap">
+   
     <header id="pc_under_header">
-		<h2 class="under_brandName">PORTFOLIO</h2>
+		<h2 class="under_brandName"><a href="/index.html">PORTFOLIO</a></h2>
 	<nav id="pc_under_nav">
 		<ul class="under_menu">
 			<li><a href="#">About</a></li>
@@ -32,7 +33,7 @@
 </header>
 
 	<header id="pc_header" class="on">
-			<h2 class="brandName">PORTFOLIO</h2>
+			<h2 class="brandName"><a href="/index.html">PORTFOLIO</a></h2>
 		<nav id="pc_nav">
 			<ul class="menu">
 				<li><a href="#">About</a></li>
@@ -56,12 +57,19 @@
             <span class="bar"></span>
     </label>
 	</header>
-	<ul id="mainSlide">
-		 <li class="on"><a href="#"><img src="img/1.jpg" alt="1"></a></li>
-		 <li><a href="#"><img src="img/2.jpg" alt="1"></a></li>
-		 <li><a href="#"><img src="img/3.jpg" alt="1"></a></li>
-		 <li><a href="#"><img src="img/4.jpg" alt="1"></a></li>
-	</ul>
+	<div id="mainSlideFrame">
+       <span id="downBtn">
+           <span id="down_left"></span>
+           <span id="down_right"></span>    
+       </span>
+        <ul id="mainSlide">
+             <li class="on"><a href="#"><img src="img/1.jpg" alt="1"></a></li>
+             <li><a href="#"><img src="img/2.jpg" alt="1"></a></li>
+             <li><a href="#"><img src="img/3.jpg" alt="1"></a></li>
+             <li><a href="#"><img src="img/4.jpg" alt="1"></a></li>
+        </ul>
+        
+	</div>
 <div id="introCopy">
 	<div id="introCopy_wrap">
 		<h2 id="intro_1">Responsive Web
@@ -72,7 +80,7 @@
 	<div id="topRanking">
 		<h2 class="subTitle">Top Ranking</h2>
 		<ul id="topRank">
-			<li><a href="#"><span class="rankBox">1</span><img src="img/product/1.jpg" alt="1"></a></li>
+			<li><a href="/product/detail.html"><span class="rankBox">1</span><img src="img/product/1.jpg" alt="1"></a></li>
 			<li><a href="#"><span class="rankBox">2</span><img src="img/product/2.jpg" alt="1"></a></li>
 			<li><a href="#"><span class="rankBox">3</span><img src="img/product/3.jpg" alt="1"></a></li>
 			<li><a href="#"><span class="rankBox">4</span><img src="img/product/4.jpg" alt="1"></a></li>
@@ -108,8 +116,10 @@
 		</div>
 	</div>
 	<div id="intro2Copy">
-		<h2 id="intro2Title">Brand</h2>
-
+		<h2 class="subTitle">Brand</h2>
+        <div id="intro2frame">
+            
+        </div>
 	</div>
 	<footer id="footer">
 		<div id="cs_left">

@@ -2,8 +2,8 @@ var Top = 0;
 
 $(window).scroll(function(){
 	Top = parseInt($(this).scrollTop());
-	console.log(Top);
- 	if(Top > 200){ // <= 효과를 주기위한 조건
+    console.log(Top);
+ 	if(Top > 160){ // <= 효과를 주기위한 조건
           $("#pc_under_header").addClass('on'); //css로 효과를 주거나
           $("#pc_header").removeClass('on'); //css로 효과를 주거나
     }
@@ -12,11 +12,11 @@ $(window).scroll(function(){
         $("#pc_header").addClass('on'); //css로 효과를 주거나
   }
 	if(Top >300){
-		$("#intro_1").css({'top' : '100px',
+		$("#intro_1").css({'top' : '70px',
 						  			'opacity' : '1'});
 	}
 	if(Top >330){
-		$("#intro_2").css({'top' : '180px',
+		$("#intro_2").css({'top' : '150px',
 						  			'opacity' : '1'});
 	}
 	if(Top >750){
@@ -24,6 +24,24 @@ $(window).scroll(function(){
 						 				'opacity' : '1'});
 	}
 });
+
+
+
+
+
+$("#downBtn").click(function(){
+	var introCopy = $("#introCopy").offset().top;
+    window.scrollTo({top : introCopy, behavior: 'smooth'});
+    
+})
+setInterval(spanUpDown, 2000);
+
+function spanUpDown(){
+$("#downBtn").animate({ 'bottom' : '30%'}, 1500, function(){
+    $(this).css({'bottom' : '2%'});
+});
+}
+
 
 /* 메인 슬라이드쇼 */
 
@@ -37,7 +55,8 @@ function AutoRun(){
     $("#mainSlide>li").eq(start).addClass('on').siblings().removeClass('on');
     start++;  
 }
-setInterval(AutoRun, 3000);
+var mainslideAuto = setInterval(AutoRun, 5000);
+
 
 /* 메인 슬라이드쇼 */
 
@@ -45,11 +64,12 @@ setInterval(AutoRun, 3000);
 $("#left_arrow").click(function(){
 	AutoSlider2_left();
 })
+    
 $("#right_arrow").click(function(){
 	AutoSlider2_right();
 })
 
-let AutoSlide = setInterval(AutoSlider2_left, 4000);
+let ssSlide_Auto = setInterval(AutoSlider2_left, 4000);
 
 function AutoSlider2_left(){
 	
@@ -62,6 +82,7 @@ function AutoSlider2_left(){
 	});	
  		}
 }
+    
 let slider2_toggle = true;
 
 function AutoSlider2_right(){
@@ -72,33 +93,39 @@ function AutoSlider2_right(){
 		
 	$("#subSlideMove").animate({'left' : '0'}, 1000, 'swing', function(){
 			slider2_toggle = true;	
-	});
+	   });
 	}	
 }
+    
+    
 $("#subSlideFrame").mouseenter(function(){
-	clearInterval(AutoSlide);
+	clearInterval(ssSlide_Auto);
 })
+    
 $("#subSlideFrame").mouseleave(function(){
-	AutoSlide = setInterval(AutoSlider2_left, 4000);
+	ssSlide_Auto = setInterval(AutoSlider2_left, 4000);
 })
-/*  Special Something 슬라이드쇼   */
+/* detail.html */
 
-
-
-
-
-
-/*
-$("#left_arrow>img").mouseover(function(){
-	$(this).attr('src', '/img/left-arrow-hover.png');
+$(".product_detail").click(function(){
+    const pro_de = $("#detail").offset().top;
+    window.scrollTo({top : pro_de - 130, behavior: 'smooth'});
 })
-$("#right_arrow>img").mouseover(function(){
-	$(this).attr('src', '/img/right-arrow-hover.png');
+
+$(".shopping_guide").click(function(){
+    const guide = $("#guide").offset().top;
+    window.scrollTo({top : guide - 130, behavior: 'smooth'});
 })
-$("#left_arrow>img").mouseleave(function(){
-	$(this).attr('src', '/img/left-arrow.png');
+
+$(".review").click(function(){
+    const review = $("#review").offset().top;
+    window.scrollTo({top : review - 130, behavior: 'smooth'});
 })
-$("#right_arrow>img").mouseleave(function(){
-	$(this).attr('src', '/img/right-arrow.png');
+
+$(".qna").click(function(){
+    const qna = $("#qna").offset().top;
+    window.scrollTo({top : qna - 130, behavior: 'smooth'});
 })
-*/
+
+/* detail.html */
+
