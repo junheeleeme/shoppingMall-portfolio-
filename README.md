@@ -1,5 +1,5 @@
 # shoppingMall-portfolio-
-# 2020.11.05
+# 2020.11.12
 ## done
 ### Main_Slide, intro, Top Ranking Animation(js)
 # ----------------------------------------
