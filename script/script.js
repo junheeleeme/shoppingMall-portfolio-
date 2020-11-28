@@ -26,14 +26,12 @@ $(window).scroll(function(){
 });
 
 
-
-
-
 $("#downBtn").click(function(){
 	var introCopy = $("#introCopy").offset().top;
     window.scrollTo({top : introCopy, behavior: 'smooth'});
     
 })
+
 setInterval(spanUpDown, 2000);
 
 function spanUpDown(){
@@ -41,7 +39,6 @@ $("#downBtn").animate({ 'bottom' : '30%'}, 1500, function(){
     $(this).css({'bottom' : '2%'});
 });
 }
-
 
 /* 메인 슬라이드쇼 */
 

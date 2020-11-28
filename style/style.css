@@ -26,6 +26,7 @@ span#downBtn{
     height: 100px;
     cursor: pointer;
     transition: 1.5s ease;
+    
 }
 
 span#down_left{
@@ -35,7 +36,7 @@ span#down_left{
     display: inline-block;
     width: 100%;
     height: 10px;
-    background-color: rgba(0,0,0, 0.75);
+    background-color: #000;
     border-radius: 10px;
     transform: translate(-50%, -50%) rotate(40deg);
     
@@ -48,7 +49,7 @@ span#down_right{
     display: inline-block;
     width: 100%;
     height: 10px;
-    background-color: rgba(0,0,0, 0.75);
+    background-color: #000;
     border-radius: 10px;
     transform: translate(-50%, -50%) rotate(-40deg);
 }
@@ -122,7 +123,7 @@ header#pc_under_header{
     top: 0;
     height: 0px;
     width: 100%;
-    background-color: #f6f5f5;
+    background-color: #f2efea;
     text-align: center;
     transition: 0.25s ease;
     opacity: 0;
@@ -141,23 +142,18 @@ header#pc_under_header.on{
 
 h2.under_brandName{
 	position: absolute;
-	width: 100%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-size: 30px;
-	font-weight: bold;
-	z-index: 9999;
 }
 
 h2.brandName{
 	position: absolute;
-	width: 100%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-size: 45px;
-	font-weight: bold;
 }
 
 nav#pc_nav{
@@ -318,6 +314,34 @@ ul#topRank li{
 	height: 250px;
 }
 
+span.itemName{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.23);
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+ul#topRank li:hover .itemName{
+    opacity: 1;
+}
+
+span.itemName p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 1.6em;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 25px;
+}
+span.itemName p>span{
+    font-size: 18px;  
+}
+
 ul#topRank li>a{
 	display: inline-block;
 	width: 100%;
@@ -343,6 +367,7 @@ span.rankBox{
 	line-height: 10px;
 	color: #fff;
 	background-color: #000;
+    transition: 0.2s ease;
 }
 
 div#subSlidess{
@@ -354,7 +379,7 @@ div#subSlidess{
 div#subSlidess>div#subSlideFrame{
 	position: relative;
 	margin-top: 50px;
-	width: 1280px;
+	max-width: 1280px;
 	height: 480px;
     overflow: hidden;
 }
@@ -390,8 +415,8 @@ ul#subSlideMove li>a>span.bgc_gray{
 span#left_arrow{
 	position: absolute;
 	display: inline-block;
-	width: 65px;
-	height: 65px;
+	width: 50px;
+	height: 50px;
 	top: 50%;
 	left: 20px;
 	transform: translate(0, -50%);
@@ -405,8 +430,8 @@ span#left_arrow>img, span#right_arrow>img{
 span#right_arrow{
 	position: absolute;
 	display: inline-block;
-	width: 65px;
-	height: 65px;
+	width: 50px;
+	height: 50px;
 	top: 50%;
 	right: 20px;
 	transform: translate(0, -50%);
@@ -457,22 +482,18 @@ div#intro2frame{
 footer#footer{
 	position: relative;
 	max-width: 1280px;
-	height: 300px;
+    display: flex;
 	border: 1px solid #000;
-	padding: 80px 0;
-}
-footer#footer div{
-	position: absolute;
-	display: inline-block;
-	text-align: center;
-	top: 50%;
 }
 
-div#cs_left{
-	width: 33%;
-	left: 0;
-	transform: translate(0%, -50%);
+#cs_left, #cs_center, #cs_right{
+    display: inline-block;
+    width: 33%;
+    height: 250px;
+	text-align: center;
+    padding: 50px 0;
 }
+
 div#cs_left h3{
 	font-size: 30px;
 	margin-bottom: 10px;
@@ -487,15 +508,10 @@ div#cs_left p#alert{
 	font-size: 16px;
 }
 
-div#cs_center{
-	width: 33%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
 div#cs_center h3{
 	font-size: 30px;
 	letter-spacing: 2px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 div#cs_center ul{
 	list-style: none;
@@ -504,15 +520,8 @@ div#cs_center ul{
 
 div#cs_center ul>li{
 	display: inline-block;
-	padding: 1px 5px;
+	padding: 1px 3px;
 	font-size: 13px;
-}
-
-div#cs_right{
-	font-size: 30px;
-	width: 33%;
-	right: 0;
-	transform: translate(0, -50%);
 }
 
 div#cs_right h3{
@@ -526,7 +535,24 @@ div#cs_right p{
 	font-size: 16px;
 }
 
+div#mobile_cs_center{
+    display: none;
+}
+div#mobile_cs_center h3{
+	font-size: 30px;
+	letter-spacing: 2px;
+	margin-bottom: 5px;
+}
+div#mobile_cs_center ul{
+	list-style: none;
+	padding: 0;
+}
 
+div#mobile_cs_center ul>li{
+	display: inline-block;
+	padding: 1px 3px;
+	font-size: 13px;
+}
 /* product/detail.html */
 
 div#contents{
@@ -697,13 +723,18 @@ ul.navTab{
 	text-align: center;
 	margin: 40px 0 10px 0;
 	padding-top: 30px;
-	border-top: 1px solid black;
 }
+
 ul.navTab li{
 	display: inline-block;
-	padding: 10px 30px;
-	border: 1px solid #000;
+	padding: 10px 15px;
+    margin: 0 15px;
     cursor: pointer;
+    transition: 0.5s ease;
+    border-bottom: 1px solid white;
+}
+ul.navTab li:hover{
+    border-bottom: 1px solid #707070;
 }
 
 div#detail{
@@ -711,8 +742,23 @@ div#detail{
 	height:500px;
 }
 div#guide{
-	border: 1px solid #000;
-	height: 500px;
+    padding: 40px;
+}
+
+#guide h3{
+    font-size: 18px;
+    margin: 0 0 15px 0;
+}
+#guide p, #guide span, #guide li{
+    font-size: 15px;
+    margin: 3px;
+}
+ul#delivery{
+    padding: 0;
+    list-style: none;
+}
+div.con{
+    margin-bottom: 50px;
 }
 div#review{
 	border: 1px solid #000;
@@ -723,11 +769,11 @@ div#qna{
 	height: 500px;
 }
 
-
 /* product/detail.html */
-
 @media screen and (max-width : 1135px){
-
+    span#downBtn{
+        display: none;
+    }
 	div#topRanking{
 		padding-top: 50px;
 	}
@@ -743,12 +789,19 @@ div#qna{
 		margin-bottom: 50px;
 	}
 	span.rankBox{
-		width: 55px;
-		height: 55px;
-		padding: 18px;
+		width: 50px;
+		height: 50px;
+		padding: 16px;
 		font-size: 28px;
 		line-height: 14px;
 	}
+    span.itemName p{
+      font-size: 32px;
+      line-height: 1.7em;
+    }
+    span.itemName p>span{
+        font-size: 23px;
+    }
 }
 @media screen and (max-width : 815px){
 	header#pc_header{
@@ -783,4 +836,41 @@ div#qna{
 		line-height: 9px;
 		font-weight: 0;
 	}
+}
+
+@media screen and (max-width : 855px){
+    footer#footer{
+        display: block;
+        padding-bottom: 150px;
+        max-width: 1280px;
+        border: 1px solid #000;
+    }
+    #cs_left, #cs_right{
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        height: auto;
+    }
+    #cs_center{
+        display: none;
+    }
+    
+    div#mobile_cs_center{
+        text-align: center;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+}
+@media screen and (max-width : 550px){
+    span.itemName p{
+      font-size: 20px;
+      line-height: 1.4em;
+    }
+    span.itemName p>span{
+        font-size: 12px;
+    }
 }
